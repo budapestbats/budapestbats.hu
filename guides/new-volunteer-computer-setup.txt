@@ -1,0 +1,149 @@
+BUDAPEST BATS WEBSITE — NEW COMPUTER / NEW VOLUNTEER SETUP
+============================================================
+Follow this if someone new needs to make proper code changes to the
+website from their own computer (as opposed to quick text edits done
+directly on github.com, which need none of this — see
+site-guide-no-coding-required.md for that simpler path).
+
+WHAT YOU'LL NEED FIRST
+------------------------
+- The budapestbats GitHub account login (budapestbats@gmail.com) — ask
+  whoever currently manages the site for the password, or to add you as
+  a collaborator on the repo instead of sharing the password.
+
+
+STEP 1 — Install VS Code
+--------------------------
+1. Go to https://code.visualstudio.com
+2. Download and install the version for your operating system (Windows/
+   Mac/Linux)
+3. Open VS Code once after installing, just to confirm it launches
+
+
+STEP 2 — Install Git
+----------------------
+1. Go to https://git-scm.com/downloads
+2. Download and install Git for your operating system
+3. Accept the default options during install if unsure
+
+
+STEP 3 — Sign in to GitHub
+----------------------------
+1. Go to https://github.com
+2. Sign in using the budapestbats account (budapestbats@gmail.com)
+   — OR, better long-term: ask the current site admin to invite your own
+   personal GitHub account as a "Collaborator" on the
+   budapestbats/budapestbats.hu repo, so each person has their own login
+   and it's clear who made which change.
+
+
+STEP 4 — Get the website code onto your computer
+----------------------------------------------------
+1. Open VS Code
+2. Open the built-in terminal (Menu: Terminal > New Terminal)
+3. Type this and press Enter (this downloads a copy of the code):
+
+   git clone https://github.com/budapestbats/budapestbats.hu.git
+
+4. This creates a new folder called "budapestbats.hu" — open that folder
+   in VS Code (File > Open Folder)
+5. The actual website files are inside the "budapest-bats-2" subfolder
+   within it — that's the one to edit
+
+
+STEP 5 — Making sure your changes are correctly credited
+------------------------------------------------------------
+Before saving any changes, set your name/email for this project folder
+so commits show who actually made them (run this once, inside the
+project folder, in the VS Code terminal):
+
+   git config user.name "Your Name"
+   git config user.email "your-email@example.com"
+
+(If you're using the shared budapestbats account rather than your own
+GitHub account, you can instead use:
+   git config user.name "Budapest Bats"
+   git config user.email "budapestbats@gmail.com"
+— but a personal account + collaborator access is the better long-term
+setup, since it's harder to know later who changed what.)
+
+
+STEP 5.5 — Generating a Personal Access Token (needed to actually push)
+----------------------------------------------------------------------
+GitHub no longer accepts your regular account password when Git asks for
+one (e.g. the first time you "git push"). Instead you need a Personal
+Access Token (PAT), which acts like a password but can be set to expire.
+
+IMPORTANT: the current token being used for this project expires on
+30 August 2026. After that date, "git push" will start failing with a
+permission/authentication error until a new token is generated. If you
+hit a push error and everything else looks right, this expiry is the
+first thing to check.
+
+How to generate a new one:
+1. Log into GitHub as the budapestbats account (or your own account, if
+   using the collaborator setup from Step 3)
+2. Click your profile picture (top right) > Settings
+3. Scroll to the bottom of the left sidebar > "Developer settings"
+4. "Personal access tokens" > "Tokens (classic)" > "Generate new token"
+   > "Generate new token (classic)"
+5. Give it a name (e.g. "budapestbats.hu website - VS Code push")
+6. Set an expiration (90 days is a reasonable choice — note the new date
+   somewhere so this doesn't get forgotten again)
+7. Under "Select scopes," tick "repo" (this gives it permission to push
+   code)
+8. Click "Generate token" at the bottom
+9. COPY THE TOKEN NOW — GitHub only shows it once. If you lose it before
+   pasting it somewhere, you'll have to generate a new one.
+
+Using the new token:
+- Next time VS Code's terminal asks for a username and password when you
+  "git push," enter your GitHub username as the username, and paste the
+  token as the password (not your real GitHub password)
+- If Windows Credential Manager has an old/expired token cached and is
+  auto-filling it (causing a permission denied error instead of a fresh
+  prompt), clear it first: Start menu > search "Credential Manager" >
+  Windows Credentials > find the entry starting with
+  "git:https://github.com" > Remove > then try "git push" again so it
+  prompts fresh and you can paste the new token
+
+
+STEP 6 — Saving and publishing a change
+--------------------------------------------
+After editing a file and saving it in VS Code:
+
+1. In the terminal, type:
+      git add .
+   (stages all your changes)
+
+2. Then:
+      git commit -m "short description of what you changed"
+
+3. Then:
+      git push
+
+4. That's it — within about a minute, Vercel will automatically rebuild
+   the live site with your change. No separate "upload" step exists.
+
+
+ABOUT VERCEL — IMPORTANT
+---------------------------
+You do NOT need to create a separate Vercel account or log into Vercel
+to make changes. Vercel is already connected to the GitHub repo and
+watches it automatically — any push to the "main" branch goes live on
+its own.
+
+If you ever DO need to look at the Vercel dashboard (to check a
+deployment, or view build errors):
+1. Go to https://vercel.com
+2. Click "Continue with GitHub"
+3. Log in with the same budapestbats GitHub account
+There is no separate Vercel password — it's entirely tied to the GitHub
+login.
+
+
+IF SOMETHING GOES WRONG
+---------------------------
+See site-guide-no-coding-required.md in this same folder — it covers
+common problems (broken deployment, expired domain, DNS issues) and what
+to check first.
