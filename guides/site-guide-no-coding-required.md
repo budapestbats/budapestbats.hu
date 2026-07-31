@@ -108,7 +108,7 @@ site — that's much harder to undo cleanly. Removing the domain is enough.
 ## What tends to go wrong
 
 - **Domain expires** — this is the big one. Rackhost bills the `.hu` domain
-  annually. If it's not renewed, the site goes down even though GitHub and
+   on the 30th July 2029. If it's not renewed, the site goes down even though GitHub and
   Vercel are both still working perfectly, because the domain itself stops
   existing. Whoever holds the Rackhost login should watch for renewal
   emails from Rackhost and make sure the card on file is valid.
