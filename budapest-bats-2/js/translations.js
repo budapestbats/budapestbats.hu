@@ -27,11 +27,14 @@ const translations = {
         "training.monday_address": "Alsó-nagyrét, Margitsziget, 1007 Budapest, Hungary",
         "training.wednesday_address": "Kőbánya Sport Club, 1105 Budapest, Ihász u. 24, Hungary",
 
+        "about_club.afl_link": "Learn more about AFL Europe",
+        "about_club.article_link": "Read more about the Budapest Bats",
+
         "join.cta": "Join the club!",
 
         "social.heading": "Follow us",
 
-        "footer.text": "© 2026 Budapest Bats. Designed by RomanSandalsMedia",
+        "footer.text": "© 2026 Budapest Bats. Website designed by RomanSandalsMedia",
 
         "contact.heading": "Contact Us",
         "contact.intro": "Ready to get involved in Australian Football?",
@@ -64,11 +67,14 @@ const translations = {
         "training.monday_address": "Alsó-nagyrét, Margitsziget, 1007 Budapest, Magyarország",
         "training.wednesday_address": "Kőbánya Sport Club, 1105 Budapest, Ihász u. 24, Magyarország",
 
+        "about_club.afl_link": "Tudj meg többet az AFL Europe-ról",
+        "about_club.article_link": "Olvass tovább a Budapest Bats csapatáról",
+
         "join.cta": "Csatlakozz a klubhoz!",
 
         "social.heading": "Kövess minket",
 
-        "footer.text": "© 2026 Budapest Bats. Készítette: RomanSandalsMedia",
+        "footer.text": "© 2026 Budapest Bats. A weboldalt készítette: RomanSandalsMedia",
 
         "contact.heading": "Lépj velünk kapcsolatba",
         "contact.intro": "Készen állsz, hogy kipróbáld az ausztrál footballt?",

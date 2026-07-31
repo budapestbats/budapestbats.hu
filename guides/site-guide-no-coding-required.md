@@ -78,6 +78,15 @@ one file: `budapest-bats-2/js/translations.js`, as a list of
 wording that appears through the language toggle, update it in **both**
 places (same key, both languages) or one language will show old text.
 
+**Making a link's text translatable**: putting `data-i18n` directly on an
+`<a>` tag breaks the link (the translation script replaces the *entire*
+contents of whatever it's attached to, including the link itself). Instead,
+wrap just the visible words in a `<span>` inside the link, and put
+`data-i18n` on that span — e.g.
+`<a href="..."><span data-i18n="key">Link text</span></a>`. That way only
+the span's text gets swapped, and the surrounding `<a href="...">` is left
+alone.
+
 ## How to "launch" the site (if it's ever fully down)
 
 If everything below is true, the site is live — usually nothing needs

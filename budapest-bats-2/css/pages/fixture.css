@@ -35,8 +35,17 @@
     color: white;
     padding: 1rem;
     border-radius: 6px;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     font-size: clamp(1rem,2vw,1.5rem)
+}
+
+.fixture-subtitle {
+    font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.85;
+    margin: 0 0 0.35rem;
 }
 
 .fixture-details {
