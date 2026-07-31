@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="brand">
+            <a href="index.html">
+                <img src="images/bats-logo-transparent.png" alt="Budapest Bats Logo" class="logo">
+            </a>
+            <h1 class="site-title">
+                <a href="index.html" class="brand-link">Budapest Bats</a> 
+            </h1>
+        </div>
+        
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li> 
+                <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li> 
+                <!-- <li><a href="gallery.html">Gallery</a></li>   --> 
+                <li><a href="fixture.html" data-i18n="nav.fixture">Fixture</a></li> 
+                <li><a href="results.html" data-i18n="nav.results">Results</a></li>               
+            </ul>
+            <div class="lang-toggle">
+                <button data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button data-lang="hu" onclick="setLanguage('hu')">HU</button>
+            </div>
+        </div>
+    </nav>
+
+   <!--  <section class="contact-spiel">
+        <h1>Contact Us</h1>
+        <p>Whether you are a new player interested in trying Australian Football, or this isnt your first rodeo. If you're looking to get invovled as a volunteer, or coach. Or if you're another football team wanting to organise a match. You can get in cotnact with us via the methods below. We look forward to hearing from you!</p>
+    </section> -->
+
+    <section class="contact-container">
+        <div class="contact-spiel">
+            <h1 data-i18n="contact.heading">Contact Us</h1>
+            <p data-i18n="contact.intro">Ready to get involved in Australian Football?</p>
+            <p data-i18n="contact.body">Whether you're trying the game for the first time, returning to the sport, interested in volunteering or coaching, or representing another club looking to arrange a match, we'd love to hear from you.</p>
+            <p data-i18n="contact.closing">Contact us using the details below, and we'll be happy to help. We look forward to welcoming you to our community!</p>
+        </div>
+    </section>
+
+    <section class="social">
+        <div class="social-content">
+
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/budapestbats/" 
+                    class="social-item" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@budapestbats</span>
+                </a>
+                
+                <a href="https://www.facebook.com/BudapestBats" 
+                    class="social-item" target="_blank" rel="noopener noreferrer"> 
+                    <i class="fa-brands fa-facebook"></i>
+                    <span> Budapest Bats</span>
+                </a>
+
+                <a href="https://www.youtube.com/@budapestbats" 
+                    class="social-item" target="_blank" rel="noopener noreferrer"> 
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>Budapestbats</span>
+                </a>
+                
+                <a href="mailto:budapestbats@gmail.com" 
+                    class="social-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>budapestbats@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-content">
+            <h2 data-i18n="footer.text">@ 2026 Budapest Bats. Designed by RomanSandalsMedia</h2>
+        </div>
+    </section>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+
+</body>
+</html>

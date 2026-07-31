@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budapest Bats - Home</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="brand">
+            <a href="index.html">
+                <img src="images/bats-logo-transparent.png" alt="Budapest Bats Logo" class="logo">
+            </a>
+            <h1 class="site-title">
+                <a href="index.html" class="brand-link">Budapest Bats</a> 
+            </h1>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li> 
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li> 
+                <!-- <li><a href="gallery.html">Gallery</a></li>    -->
+                <li><a href="fixture.html" data-i18n="nav.fixture">Fixture</a></li> 
+                <li><a href="results.html" data-i18n="nav.results">Results</a></li>               
+            </ul>
+            <div class="lang-toggle">
+                <button data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button data-lang="hu" onclick="setLanguage('hu')">HU</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Budapest Bats Australian Football Club</h1>
+            <p data-i18n="hero.subtitle"> 
+            We are Hungary's first Australian Football Club! Join us, train with us, or come watch a match!
+            </p>
+            <img src="images/bats-team-photo.JPG" alt ="Budapest Bats team photo" class="team-photo">
+        </div>
+    </section>
+
+<!--     <section class="next-match">
+        <div class="next-match-content">
+            <h2>Next Match</h2>
+            <h3> Empire Cup Round 1: Nysa</h3>
+            <p>26th April 2026: Fort Nysa vs Budapest Bats, Budapest Bats vs Prague Dragons, Fort Nysa vs Prague Dragons</p>
+            <p>Location: Fort Nysa Oval - Kornela Ujejskiego 1, 48-300 Nysa, Poland</p>
+        </div>
+    </section> -->
+    
+    <section class="about-the-club">
+        <div class="about-the-club-container">
+            <div class="about-the-club-content">
+                <h2 data-i18n="about_club.heading">About the club</h2>
+                <p data-i18n="about_club.body">The Budapest Bats Australian Football Club was established in 2019. We compete as part of the Empire Cup, travelling through Central Europe to compete against our rivals in Austria, Czechia and Poland. Trainings are on Monday and Wednesday nights. We run social events from nights out together through to AFL watch parties. We are recruiting players/volunteers/coaches, all are welcome! Our members come from all over the world, Hungary and Australia just to name a few, we are a club for everyone!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-the-sport">
+        <div class="about-the-sport-content">
+            <h2 data-i18n="about_sport.heading">What is Australian Football?</h2>
+            <p data-i18n="about_sport.body1">Australian Football (also known as Aussie Rules or AFL) is a fast-paced, exciting sport played on a large oval field with an oval-shaped ball. The game combines running, kicking, handballing, tackling, and spectacular high marks (catches), making it one of the most unique and dynamic sports in the world.</p>
+            <p data-i18n="about_sport.body2">Teams score a goal by kicking the ball between the two central goal posts, which is worth 6 points. If the ball passes between a goal post and the smaller outer post, it scores a behind, worth 1 point.</p>
+            <p data-i18n="about_sport.body3">In the Empire Cup, the competition we play in, matches are typically played 9-a-side, making the game fast, open, and perfect for players of all experience levels.</p>
+            <h3 data-i18n="about_sport.new_heading">New to the game?</h3>
+            <p data-i18n="about_sport.new_body1">If you've never played Australian Football before, don't worry—everyone starts somewhere! By attending training regularly, you'll quickly learn the fundamentals, including kicking, handballing, marking, and tackling, with the support of our friendly teammates.</p>
+            <p data-i18n="about_sport.new_body2">If you're interested in giving Australian Football a try, we'd love to have you at training. All you need to bring is a pair of running shoes, a water bottle, and a willingness to give it a go!</p>
+        </div>
+    </section>
+
+    <section class="training">
+        <div class="training-content">
+            <h2 data-i18n="training.heading">Training</h2>
+            <div class="training-maps">
+                <h3 data-i18n="training.monday_time">Mondays, 18:30 - 20:30 (April - October)</h3>
+                <h3 data-i18n="training.wednesday_time">Wednesdays, 19:00 - 21:00 (Year round)</h3>
+                <p data-i18n="training.monday_address">Alsó-nagyrét, Margitsziget, 1007 Budapest, Hungary</p>
+                <p data-i18n="training.wednesday_address">Kőbánya Sport Club, 1105 Budapest, Ihász u. 24, Hungary</p>
+                <iframe
+                    src="https://maps.google.com/maps?q=47.5245829,19.0482656&z=16&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map of Alsó-nagyrét, Margaret Island">
+                </iframe>
+                <iframe
+                    src="https://maps.google.com/maps?q=K%C5%91b%C3%A1nya+Sport+Club,+1105+Budapest,+Ih%C3%A1sz+u.+24&z=15&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map of Kőbánya Sport Club">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-the-club">
+        <div class="join-the-club-content">
+            <a href="contact.html" data-i18n="join.cta">Join the club!</a>
+        </div>
+    </section>
+
+    <section class="social">
+        <div class="social-content">
+            <h2 data-i18n="social.heading">Follow us</h2>
+
+            <div class="social-icons">
+
+                <a href="https://www.instagram.com/budapestbats/" 
+                    class="social-item" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@budapestbats</span>
+                </a>
+                
+                <a href="https://www.facebook.com/BudapestBats" 
+                    class="social-item" target="_blank" rel="noopener noreferrer"> 
+                    <i class="fa-brands fa-facebook"></i>
+                    <span> Budapest Bats</span>
+                </a>
+
+                <a href="https://www.youtube.com/@budapestbats" 
+                    class="social-item" target="_blank" rel="noopener noreferrer"> 
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>Budapestbats</span>
+                </a>
+                
+                <a href="mailto:budapestbats@gmail.com" 
+                    class="social-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>budapestbats@gmail.com</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-content">
+            <h2 data-i18n="footer.text">@ 2026 Budapest Bats. Designed by RomanSandalsMedia</h2>
+        </div>
+    </section>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+
+</body>
+</html>

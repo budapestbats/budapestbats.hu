@@ -1,0 +1,68 @@
+.results {
+    display: flex;
+    justify-content: center;
+    padding: clamp(2rem, 6px, 4rem) 1rem clamp(4rem, 10vw, 8rem); 
+}
+
+.results-content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+.results-content h1{
+font-size: 4rem;
+}
+
+
+.results-year {
+    font-size:clamp(3rem,4vw,4rem);
+}
+
+.results-group {
+    margin-bottom: 3rem;
+    text-align: center;
+    padding: clamp(2rem,4px,3rem) 1rem;
+    border:solid black;
+}
+
+.result-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.result-item {
+    background-color: teal;;
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem; 
+    font-size: clamp(1rem,2vw,1.5rem)
+}
+
+.result-details {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 400;
+}
+
+.scorecard {
+    display: grid;
+    grid-template-columns: 1fr repeat(4,1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items:center;
+}
+
+.score {
+    background-color: black;
+    color: white; 
+    padding:0.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.total-score{
+    font-weight: bold;
+    /* background-color: teal; */
+    border-radius:2px;
+    padding:0.2rem;
+}

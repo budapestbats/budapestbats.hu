@@ -1,0 +1,11 @@
+body {
+    background-color: #F5F7F6;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* p {
+    font-size: 1rem;
+} */

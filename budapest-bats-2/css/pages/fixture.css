@@ -1,0 +1,45 @@
+.fixture {
+    display: flex;
+    justify-content: center;
+    padding: clamp(2rem, 6px, 4rem) 1rem clamp(4rem, 10vw, 8rem); 
+}
+
+.fixture-content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.fixture-content h1 {
+    font-size:4rem;
+}
+
+
+/* .fixtures-content p {
+    font-size: 2rem;
+} */
+
+.fixture-group {
+    margin-bottom: 3rem;
+    text-align:center;
+    padding: clamp(2rem,4px,3rem) 1rem;
+    border:4px solid black;
+}
+
+.fixture-title {
+    font-size: 2rem;
+}
+.fixture-item {
+    background-color: teal;;
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem; 
+    font-size: clamp(1rem,2vw,1.5rem)
+}
+
+.fixture-details {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 400;
+}

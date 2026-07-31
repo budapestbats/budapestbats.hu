@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixture</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/fixture.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="brand">
+            <a href="index.html">
+                <img src="images/bats-logo-transparent.png" alt="Budapest Bats Logo" class="logo">
+            </a>
+            <h1 class="site-title">
+                <a href="index.html" class="brand-link">Budapest Bats</a> 
+            </h1>
+        </div>
+        
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li> 
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li> 
+                <!-- <li><a href="gallery.html">Gallery</a></li>    -->
+                <li><a href="fixture.html" class="active" data-i18n="nav.fixture">Fixture</a></li> 
+                <li><a href="results.html" data-i18n="nav.results">Results</a></li>               
+            </ul>
+            <div class="lang-toggle">
+                <button data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button data-lang="hu" onclick="setLanguage('hu')">HU</button>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="fixture">
+        <div class="fixture-content">
+            
+            <h1 data-i18n="nav.fixture">Fixture</h1>
+
+            <!--
+                ==========================================================
+                UPDATE FIXTURE HERE
+                To add a new fixture: copy everything from <div class="fixture-group">
+                down to the matching closing </div>, paste it in below (in the
+                correct date order among the fixture-groups), then fill in your
+                own details in place of the CAPITALS below.
+
+                <div class="fixture-group">
+                    <h2 class="fixture-title">ROUND NAME</h2>
+                    <h2>Hosts: HOST CITY</h2>
+
+                    <div class="fixture-item">
+                        <h3>TEAM A vs TEAM B</h3>
+                    </div>
+
+                    <div class="fixture-details">
+                        <p>DAY DATE MONTH YEAR</p>
+                        <p>VENUE NAME: ADDRESS</p>
+                    </div>
+                </div>
+                ==========================================================
+            -->
+
+            <div class="fixture-group">
+                <h2 class="fixture-title">Hungarian National Team</h2>
+
+                <div class="fixture-item">
+                    <h3>Austria vs Hungary</h3>
+                </div>
+
+                <div class="fixture-details">
+                    <p>Saturday 21st March 2026</p>
+                    <p>Vienna Celtic Rugbby Football Club: Steinergasse 12, 1230 Wien, Austria</p>
+                </div>
+            </div>
+
+            <div class="fixture-group">
+                <h2 class="fixture-title">Empire Cup Round 1</h2>
+                <h2>Hosts: Nysa</h2>
+
+                <div class="fixture-item">
+                    <h3>Fort Nysa vs Budapest Bats</h3>
+                </div>
+                
+                <div class="fixture-item">
+                    <h3>Prague Dragons vs Budapest Bats</h3>
+                </div>
+
+                <div class="fixture-details">
+                    <p> Saturday 26th April 2026</p>
+                    <p> Fort Nysa Oval: Kornela Ujejskiego 1, 48-300 Nysa, Poland</p>
+                </div>
+                
+            </div>    
+            
+            <div class="fixture-group">
+                <h2 class="fixture-title">Empire Cup Round 2</h2>
+                <h2 class="fixture-subtitle">Hosts: Prague</h2>
+
+                <div class="fixture-item">
+                    <h3>Bye Round</h3>
+                </div>
+            </div>    
+
+            <!-- <div class="fixture-group">
+                <h2>Empire Cup Round 3</h2>
+                <h2>Hosts: Budapest</h2>
+
+                <div class="fixture-item">
+                    <h3>Budapest Bats vs Vienna Galahs</h3>
+                    <h3>Budapest Bats vs Prague Dragons</h3>
+                        <p> Saturday 27th June 2026</p>
+                        <p> Csepel</p>
+                </div>
+    
+            </div>  -->
+
+            <div class="fixture-group">
+                <h2 class="fixture-title">Empire Cup Round 3</h2>
+                <h2>Hosts: Budapest</h2>
+
+                <div class="fixture-item">
+                    <h3>Budapest Bats vs Vienna Galahs</h3>
+                </div>
+                
+                <div class="fixture-item">
+                    <h3>Budapest Bats vs Prague Dragons</h3>
+                </div>
+
+                <div class="fixture-details">
+                        <p> Saturday 27th June 2026</p>
+                        <p> Location: TBD</p>
+                </div>
+            </div> 
+            
+            <div class="fixture-group">
+                <h2 class="fixture-title">Hungarian National Team</h2>
+                <h2>AFL Euro Cup</h2>
+                
+                <!-- <div class="fixture-item">
+                    <h3></h3>
+                </div>
+                
+                <div class="fixture-item">
+                    <h3></h3>
+                </div> -->
+
+                <p> Newcastle, United Kingdom</p>
+                <p> Location: TBD</p>
+            </div>   
+            
+            <div class="fixture-group">
+                <h2 class="fixture-title">Empire Cup Round 4</h2>
+                <h2>Hosts: Vienna</h2>
+
+                <div class="fixture-item">
+                    <h3>Vienna Galahs vs Budapest Bats</h3>
+                </div>
+                
+                <div class="fixture-item">
+                    <h3>Fort Nysa vs Budapest Bats</h3>
+                </div>
+                
+                <div class="fixture-details">
+                    <p> Saturday 18th July</p>
+                    <p> Vienna Celtic Rugbby Football Club: Steinergasse 12, 1230 Wien, Austria</p>
+                </div>
+            </div> 
+
+            <div class="fixture-group">
+                <h2 class="fixture-title">Empire Cup Grand Final</h2>
+                <h2>Hosts: Nysa</h2>
+
+                <div class="fixture-item">
+                    <h3>TBD vs TBD</h3>
+                </div>
+                
+                <div class="fixture-details">
+                    <p>TBD September</p>
+                    <p>Fort Nysa Oval: Kornela Ujejskiego 1, 48-300 Nysa, Poland</p>
+                </div>
+            </div> 
+
+            
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-content">
+            <h2 data-i18n="footer.text">@ 2026 Budapest Bats. Designed by RomanSandalsMedia</h2>
+        </div>
+    </section>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+
+</body>
+</html>

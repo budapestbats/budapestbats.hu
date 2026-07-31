@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/results.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="brand">
+            <a href="index.html">
+                <img src="images/bats-logo-transparent.png" alt="Budapest Bats Logo" class="logo">
+            </a>
+            <h1 class="site-title">
+                <a href="index.html" class="brand-link">Budapest Bats</a> 
+            </h1>
+        </div>
+
+        
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li> 
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li> 
+                <!-- <li><a href="gallery.html">Gallery</a></li>   --> 
+                <li><a href="fixture.html" data-i18n="nav.fixture">Fixture</a></li> 
+                <li><a href="results.html" class="active" data-i18n="nav.results">Results</a></li>               
+            </ul>
+            <div class="lang-toggle">
+                <button data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button data-lang="hu" onclick="setLanguage('hu')">HU</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="results">
+        <div class="results-content">
+            <h1 data-i18n="nav.results">Results</h1>
+
+            <!--
+                ==========================================================
+                ENTER SCORES HERE
+                To add a new result: copy everything from <div class="results-group">
+                down to the matching closing </div>, paste it in below (most recent
+                results usually go at the top), then fill in your own details in
+                place of the CAPITALS below.
+
+                Aussie Rules scoring works as GOALS.BEHINDS (total points) —
+                e.g. "5.3" means 5 goals and 3 behinds, worth 33 total points
+                (each goal = 6 points, each behind = 1 point). Each <div class="score">
+                below is one quarter's running score, so there should be 4 per team.
+
+                <div class="results-group">
+                    <h2 class="result-title">ROUND / COMPETITION NAME</h2>
+
+                    <div class="result-item">
+                        <h3>TEAM A SCORE def. TEAM B SCORE</h3>
+                    </div>
+
+                    <div class="result-details">
+                        <p>DAY DATE MONTH YEAR</p>
+                        <p>VENUE NAME</p>
+                    </div>
+
+                    <div class="scorecard">
+                        <div class="team-name">TEAM A</div>
+                        <div class="score">Q1 GOALS.BEHINDS <span class="total-score">Q1 TOTAL</span></div>
+                        <div class="score">Q2 GOALS.BEHINDS <span class="total-score">Q2 TOTAL</span></div>
+                        <div class="score">Q3 GOALS.BEHINDS <span class="total-score">Q3 TOTAL</span></div>
+                        <div class="score">Q4 GOALS.BEHINDS <span class="total-score">Q4 TOTAL</span></div>
+
+                        <div class="team-name">TEAM B</div>
+                        <div class="score">Q1 GOALS.BEHINDS <span class="total-score">Q1 TOTAL</span></div>
+                        <div class="score">Q2 GOALS.BEHINDS <span class="total-score">Q2 TOTAL</span></div>
+                        <div class="score">Q3 GOALS.BEHINDS <span class="total-score">Q3 TOTAL</span></div>
+                        <div class="score">Q4 GOALS.BEHINDS <span class="total-score">Q4 TOTAL</span></div>
+                    </div>
+
+                    <div class="goalscorers">
+                        <div class="bats-goalscorers">
+                            <p>Goals: PLAYER .GOALS, PLAYER .GOALS</p>
+                            <p>Man of the Match: PLAYER</p>
+                        </div>
+                    </div>
+                </div>
+                ==========================================================
+            -->
+
+            <div class="select-year">
+                <h2 class="results-year">2026</h2>
+                <div class="results-group">
+                    <h2 class="result-title">Hungarian National Team</h2>
+
+                    <div class="result-item">
+                        <h3>Austria 69 def. Hungary 56</h3>
+                    </div>
+
+                    <div class="result-details">
+                        <p>Saturday 21st March 2026</p>
+                        <p>Vienna Celtic Rugbby Football Club</p>
+                    </div>
+
+                    <div class="scorecard">
+
+                        <div class="team-name">Austria</div>
+                        <div class="score">5.3 
+                            <span class="total-score">33</span>
+                        </div>  
+                        <div class="score">5.5
+                            <span class="total-score">35</span>
+                        </div>  
+                        <div class="score">7.7
+                            <span class="total-score">49</span>
+                        </div>  
+                        <div class="score">10.9
+                            <span class="total-score">69</span>
+                        </div>  
+                            
+
+                        <div class="team-name">Hungary</div>
+                        <div class="score">0.1
+                            <span class="total-score">1</span>
+                        </div>
+                        <div class="score">2.4
+                            <span class="total-score">16</span>
+                        </div>
+                        <div class="score">5.5
+                            <span class="total-score">35</span>
+                        </div>
+                        <div class="score">8.8
+                            <span class="total-score">56</span>
+                        </div>
+                    </div>
+
+                    <div class="goalscorers">
+                        <div class="bats-goalscorers">
+                            <p>Hun Goals: Inglis, C .3, Siket, M .2, Barat, B., Olah, B., Veszi-Hajdu, A.</p>
+                            <p>Hun Man of the Match: Inglis, C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    
+    
+
+
+    </section>
+
+    <section class="footer">
+        <div class="footer-content">
+            <h2 data-i18n="footer.text">@ 2026 Budapest Bats. Designed by RomanSandalsMedia</h2>
+        </div>
+    </section>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+
+
+</body>
+</html>
