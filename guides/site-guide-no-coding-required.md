@@ -5,6 +5,19 @@ how to take it offline if needed, and what tends to go wrong. No coding
 knowledge required to read this — some steps need someone comfortable
 clicking around GitHub's website.
 
+## Using an AI assistant (ChatGPT, Claude, etc.) to make changes
+
+If someone without coding experience wants to use an AI tool to help edit
+the site, give it context first — **paste in the notes from
+`context/conversations/`** (each file is a dated log of what was done and
+why, including the tricky bits like the Vercel Root Directory setting and
+the .hu domain registration). Without that background, an AI helper is
+starting from zero and is far more likely to suggest something that breaks
+the deployment setup or duplicates work that's already been done. The most
+important one to paste in first is
+`2026-07-31-deployment-and-dns-setup.md` — it covers the whole hosting
+setup end to end.
+
 ## How the site works (the short version)
 
 Three services, all connected to each other:

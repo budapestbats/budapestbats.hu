@@ -36,6 +36,20 @@ Running log of getting budapestbats.hu actually live.
   - `www.budapestbats.hu` — deleted the old A record, added a **CNAME** record → `0c6b320cf9e4a3e7.vercel-dns-017.com`
 - Confirmed live at Rackhost's authoritative nameserver (`ns1.dns24.hu`) via `nslookup` immediately after saving — just waiting on propagation to public resolvers (Google DNS etc.) and Vercel's automatic SSL issuance after that.
 
-## Still open / worth knowing later
-- Domain renewal at Rackhost is annual — if it lapses, the site goes down even though GitHub/Vercel are still fine. See the maintenance guide in `/guides` for details.
-- See `/guides/site-guide-no-coding-required.md` and `/guides/new-volunteer-computer-setup.txt` (repo root) for handover documentation aimed at non-technical club members.
+## 6. The real blocker: .hu registry owner-details confirmation
+- After step 5, DNS records were correct but the domain still didn't resolve anywhere — not a propagation delay, but because the **.hu registry itself had never activated delegation** for budapestbats.hu
+- Confirmed via `nslookup -type=NS budapestbats.hu a.hu` (querying the `.hu` TLD's own nameserver directly) — it returned nothing, meaning no delegation existed at the registry level
+- Root cause, found on Rackhost's Domainek page: status showed **"Tulajdonos adatok hiányoznak"** (owner data missing). `.hu` domains require a registrant who is a Hungarian resident (or elsewhere in the EU) with a valid personal ID/tax number — this wasn't filled in yet
+- Fix: a Hungarian friend's details were submitted via Rackhost's "Tulajdonos adatai" (owner details) form (name, Hungarian address, ID card number, phone, email)
+- Rackhost then emailed a confirmation link to budapestbats@gmail.com (required to verify the contact email before the registration request is even forwarded to the .hu Registry) — that link was clicked the same day
+- Status moved to "Regisztráció folyamatban" (registration in progress), and registry delegation went active later the same day
+- Confirmed live: `nslookup -type=NS budapestbats.hu a.hu` now shows Rackhost's nameservers, public DNS resolves correctly, and `https://www.budapestbats.hu` returns 200 with valid SSL
+
+## Launch status: LIVE (2026-07-31)
+budapestbats.hu is fully live — code, DNS, and domain registration all
+resolved. If the site ever goes down again, check in this order: (1) is the
+domain still renewed at Rackhost, (2) do the DNS records at Rackhost still
+match section 5 above, (3) does Vercel's Deployments tab show a successful
+build. See `/guides/site-guide-no-coding-required.md` and
+`/guides/new-volunteer-computer-setup.txt` (repo root) for handover
+documentation aimed at non-technical club members.
