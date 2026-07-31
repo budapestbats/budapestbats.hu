@@ -44,11 +44,39 @@ need VS Code at all:
 1. Go to `github.com/budapestbats/budapestbats.hu`
 2. Open the file you want to change (site files live inside the
    `budapest-bats-2` folder — e.g. `budapest-bats-2/fixture.html`)
-3. Click the pencil icon (top right of the file view) to edit it in the
+3. **Before editing, copy the entire current contents somewhere safe**
+   (paste it into Notes, an email draft, anything) — this is your simplest
+   possible undo button. If anything goes wrong, you can just paste this
+   back in and re-commit, no git knowledge required.
+4. Click the pencil icon (top right of the file view) to edit it in the
    browser
-4. Make your change, then scroll down and click "Commit changes"
-5. That's it — Vercel will automatically rebuild and the live site updates
-   within about a minute
+5. Make your change, then scroll down to "Commit changes"
+6. Straight to production, or test first? See the next section before you
+   click that button.
+
+### Test a change safely before it goes live (recommended for anything bigger than a typo fix)
+
+Clicking "Commit changes" directly commits to the `main` branch, which
+goes live within about a minute — there's no preview step unless you ask
+for one. GitHub actually offers one, it's just easy to miss: when you
+scroll down to commit, there are two radio button options:
+- "Commit directly to the `main` branch" — goes live immediately
+- **"Create a new branch for this commit and start a pull request"** —
+  pick this one instead for anything you're not 100% sure about
+
+Choosing the second option does two useful things:
+1. Vercel automatically builds a **preview URL** for that branch — a
+   working copy of the site with your change, at a throwaway link, that
+   doesn't affect the real `budapestbats.hu` at all. Find it in the
+   Vercel dashboard under Deployments (it'll show up as a new entry
+   separate from Production), or as a check/comment on the Pull Request
+   itself.
+2. Check that preview link looks right, on both desktop and phone. Happy
+   with it? Go to the "Pull requests" tab on GitHub, open the one you just
+   created, and click **"Merge pull request"** — that's what actually
+   pushes it to `main` and makes it live. Not happy with it? Just close
+   the pull request without merging — nothing you did ever touched the
+   live site.
 
 ### The full pipeline, and how to check it actually worked
 
@@ -134,11 +162,30 @@ site — that's much harder to undo cleanly. Removing the domain is enough.
   Vercel are both still working perfectly, because the domain itself stops
   existing. Whoever holds the Rackhost login should watch for renewal
   emails from Rackhost and make sure the card on file is valid.
-- **A GitHub edit breaks a page** — since every push goes live automatically,
-  a typo or a broken tag (like an unclosed `<div>`) can visibly break the
-  live site within a minute. If a page looks broken right after an edit,
-  go to that file on GitHub, click "History," and revert to the previous
-  version — that instantly triggers a new (working) deployment.
+- **A GitHub edit breaks a page** — since a direct commit to `main` goes
+  live automatically, a typo or a broken tag (like an unclosed `<div>`) can
+  visibly break the live site within a minute. To fix it:
+  1. If you saved a copy of the file's original content before editing
+     (see the tip above), just paste that back in, save, and commit —
+     done, this is the easiest path.
+  2. If not: go to the file on GitHub, click **"History"** (top right of
+     the file view), find the commit from *before* your change, click it,
+     then click the **"..."** menu on that old version and choose
+     **"Browse repository at this point in time."** Open the file there,
+     copy its full contents, go back to the current file, paste the old
+     content in, and commit. (There's no single "revert" button for
+     direct commits to `main` — that only exists for Pull Requests, which
+     is one more reason to use the branch/PR method above for anything
+     risky.)
+- **Not sure what actually broke** — check in this order: (1) does the
+  page look wrong on both desktop and phone, or just one? (2) which file
+  did you last edit — the broken section is almost always tied to that;
+  (3) check the Vercel Deployments tab for a red X with an error log
+  (usually points at the exact broken line); (4) if a page is blank or
+  visibly mangled, right-click anywhere on it → "Inspect" → the "Console"
+  tab — red text there is an error message, which you can paste into an
+  AI assistant (along with the relevant file's content) to get a plain-English
+  explanation.
 - **Vercel build fails** — check the project's Deployments tab. A red X
   next to the latest deployment means the site did NOT update — the
   previous working version is still live, so nothing is broken for
@@ -173,3 +220,13 @@ site — that's much harder to undo cleanly. Removing the domain is enough.
 See `new-volunteer-computer-setup.txt` in this same folder for how to get a
 new person's computer set up to make code changes properly (via VS Code)
 rather than just quick browser edits.
+
+## Still stuck?
+
+If you've tried the steps above and the site is still broken or you're not
+sure what to do next: the site was originally built by Julian Romano
+(RomanSandalsMedia) — reach out via budapestbats@gmail.com. Worst case,
+the site can always be restored from an older working commit in GitHub's
+history (nothing is ever permanently lost just from editing a file), so
+there's no version of "broke it beyond repair" here — just varying amounts
+of time to fix it.
